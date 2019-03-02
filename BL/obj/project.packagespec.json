@@ -1,0 +1,50 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\BL\\BL.csproj",
+    "projectName": "Contacts.BL",
+    "projectPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\BL\\BL.csproj",
+    "outputPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\BL\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\DAL\\DAL.csproj": {
+            "projectPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\DAL\\DAL.csproj"
+          },
+          "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\Domain\\Domain.csproj": {
+            "projectPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\Domain\\Domain.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

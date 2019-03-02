@@ -1,0 +1,65 @@
+@using Contacts.BL.Models
+@model IEnumerable<Contact>
+
+@{
+    ViewBag.Title = "Contacten";
+    Layout = "_Layout";
+}
+
+<h2>Contacten</h2>
+<a asp-action="Create" >Contact maken</a>
+<table class="table">
+    <tr>
+        <th>PersonId</th>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Mobile</th>
+        <th>Blocked</th>
+    </tr>
+    @foreach (Contact contact in @Model)
+    {
+        <tr id="contact_@contact.PersonId">
+            <td>@contact.PersonId </td>
+            <td>@contact.Name</td>
+            <td>@contact.Birthday.ToShortDateString()</td>
+            <td>@contact.Gender</td>
+            <td>@contact.Phone</td>
+            <td>@contact.Mobile</td>
+            <td><input asp-for="@contact.Blocked" disabled/></td>
+            <td>
+                <a asp-action="Details" asp-route-id="@contact.PersonId">Details</a>
+                | <a asp-action="Edit" asp-route-id="@contact.PersonId">Bewerk</a>
+                | <a asp-action="Delete" asp-route-id="@contact.PersonId">Verwijder</a>
+            </td>
+            <td><button class="btn-danger" onclick="blockContact(@contact.PersonId)" >Block</button></td>
+        </tr>
+    }
+    
+</table>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        function blockContact(contactId) {
+            var status = false;
+            var response = {blocked : false}
+            $.ajax('https://localhost:5001/api/Contacts/' + contactId + '/blocked',
+                    {
+                        type: 'POST',
+                        dataType: 'json',
+                        content: 'Application/json',
+                        data: JSON.stringify(response)
+                    })
+                .done(function() {
+                    
+                    var checkboxOfContact = $('tr#contact_' + contactId + ' input[name$=Blocked]');
+                    checkboxOfContact.prop('checked', true);
+                })
+                .fail(function() {
+                    alert("Something went wrong");
+                });
+        }
+    </script>
+}

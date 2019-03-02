@@ -1,0 +1,59 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\DAL\\DAL.csproj",
+    "projectName": "Contacts.DAL",
+    "projectPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\DAL\\DAL.csproj",
+    "outputPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\DAL\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\Domain\\Domain.csproj": {
+            "projectPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\Domain\\Domain.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "Microsoft.EntityFrameworkCore.Proxies": {
+          "target": "Package",
+          "version": "[2.1.4, )"
+        },
+        "Microsoft.EntityFrameworkCore.Sqlite": {
+          "target": "Package",
+          "version": "[2.1.4, )"
+        },
+        "Microsoft.Extensions.Logging.Debug": {
+          "target": "Package",
+          "version": "[2.1.1, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

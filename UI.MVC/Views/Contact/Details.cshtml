@@ -1,0 +1,37 @@
+@using Contacts.BL.Models
+@model Contacts.BL.Models.Contact
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "_Layout";
+}
+
+<h2>Details</h2>
+<dl class="dl-horizontal">
+    <dt>PersonId</dt><dd>@Model.PersonId</dd>
+    <dt>Name</dt><dd>@Model.Name</dd>
+    <dt>Birthday</dt><dd>@Model.Birthday</dd>
+    <dt>Gender</dt><dd>@Model.Gender</dd>
+    <dt>Phone</dt><dd>@Model.Phone</dd>
+    <dt>Mobile</dt><dd>@Model.Mobile</dd>
+    <dt>Blocked</dt><dd>@Model.Blocked</dd>
+    <dt>Adres</dt><dd>@Model.Adress.StreetAndNumber, @Model.Adress.Zipcode @Model.Adress.City</dd>
+</dl>
+<a asp-action="Edit" asp-route-id="@Model.PersonId">Bewerk</a>
+<h3>Categorieëen</h3>
+<table class="table">
+    <tr>
+        <th>Categorie</th>
+    </tr>
+    @foreach (ContactCategory category in @Model.Categories)
+    {
+        <tr>
+            <td>@category.Category.Description</td>
+        </tr>
+    }
+    @if (!@Model.Categories.Any())
+    {
+        <p>Not assigned to any category</p>
+    }
+</table>
+<a asp-action="Index">Back to list</a>

@@ -1,0 +1,64 @@
+@model Contacts.BL.Models.Contact
+
+@{
+    ViewBag.Title = "Edit contact";
+    Layout = "_Layout";
+}
+
+<h2>Edit contact</h2>
+<form asp-action="Edit" asp-route-id="@Model.PersonId" method="post">
+    <div class="form-group">
+        <label asp-for="PersonId"></label>
+        <input asp-for="PersonId" class="form-control" readonly/>
+        <span asp-validation-for="PersonId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthday"></label>
+        <input asp-for="Birthday" class="form-control"/>
+        <span asp-validation-for="Birthday" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender"></label>
+        <select asp-items="@(new SelectList(Enum.GetValues(typeof(Contacts.BL.Models.Gender))))" asp-for="Gender"></select>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="form-control"/>
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mobile"></label>
+        <input asp-for="Mobile" class="form-control"/>
+        <span asp-validation-for="Mobile" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Blocked"></label>
+        <input asp-for="Blocked"/>
+        <span asp-validation-for="Blocked" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress.Zipcode"></label>
+        <input asp-for="Adress.Zipcode"/>
+        <span asp-validation-for="Adress.Zipcode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress.City"></label>
+        <input asp-for="Adress.City"/>
+        <span asp-validation-for="Adress.City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress.StreetAndNumber"></label>
+        <input asp-for="Adress.StreetAndNumber"/>
+        <span asp-validation-for="Adress.StreetAndNumber" class="text-danger"></span>
+    </div>
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <input type="submit" value="Opslaan"/>
+    </div>
+</form>

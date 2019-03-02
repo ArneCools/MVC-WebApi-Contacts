@@ -1,0 +1,51 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\UI.CA\\UI.CA.csproj",
+    "projectName": "Contacts.UI.CA",
+    "projectPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\UI.CA\\UI.CA.csproj",
+    "outputPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\UI.CA\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\BL\\BL.csproj": {
+            "projectPath": "C:\\Users\\arnec\\OneDrive\\Documenten\\School\\2018-2019\\Programmeren NET\\Prak_contacten\\BL\\BL.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[12.0.1, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

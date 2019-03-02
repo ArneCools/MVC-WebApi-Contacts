@@ -1,0 +1,22 @@
+@using Contacts.BL.Models
+@model Contacts.BL.Models.Contact
+
+@{
+    ViewBag.Title = "Contact verwijderen";
+    Layout = "_Layout";
+}
+
+<h2>Contact verwijderen</h2>
+<dl class="dl-horizontal">
+    <dt>PersonId</dt><dd>@Model.PersonId</dd>
+    <dt>Name</dt><dd>@Model.Name</dd>
+    <dt>Birthday</dt><dd>@Model.Birthday</dd>
+    <dt>Gender</dt><dd>@Model.Gender</dd>
+    <dt>Phone</dt><dd>@Model.Phone</dd>
+    <dt>Mobile</dt><dd>@Model.Mobile</dd>
+    <dt>Blocked</dt><dd>@Model.Blocked</dd>
+    <dt>Adres</dt><dd>@Model.Adress.StreetAndNumber, @Model.Adress.Zipcode @Model.Adress.City</dd>
+</dl>
+<form asp-action="DeleteConfirmed" asp-route-id="@Model.PersonId" method="get">
+    <input type="submit" class="btn btn-default" value="Verwijder"/>
+</form>

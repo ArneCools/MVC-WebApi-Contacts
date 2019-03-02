@@ -1,0 +1,59 @@
+@model CreateContactViewModel
+
+@{
+    ViewBag.Title = "Contact maken";
+    Layout = "_Layout";
+}
+
+<h2>Contact maken</h2>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthday"></label>
+        <input asp-for="Birthday" class="form-control"/>
+        <span asp-validation-for="Birthday" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender"></label>
+        <select asp-items="@(new SelectList(Enum.GetValues(typeof(Contacts.BL.Models.Gender))))" asp-for="Gender"></select>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="form-control"/>
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mobile"></label>
+        <input asp-for="Mobile" class="form-control"/>
+        <span asp-validation-for="Mobile" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Blocked"></label>
+        <input asp-for="Blocked"/>
+        <span asp-validation-for="Blocked" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Zipcode"></label>
+        <input asp-for="Zipcode"/>
+        <span asp-validation-for="Zipcode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <input asp-for="City"/>
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StreetAndNumber"></label>
+        <input asp-for="StreetAndNumber"/>
+        <span asp-validation-for="StreetAndNumber" class="text-danger"></span>
+    </div>
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <input type="submit" value="Opslaan"/>
+    </div>
+</form>
